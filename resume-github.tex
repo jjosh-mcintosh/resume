@@ -1,0 +1,302 @@
+% Joshua McIntosh's Resume
+% Based on Andrew McNabb's Resume
+% Original Document Created: 7 Jan 2004
+% Current Document Last Modified: Sun Sep 16 18:59:17 PDT 2012
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt,oneside]{article}
+\usepackage{xltxtra,fontspec,xunicode}
+\usepackage{geometry}
+\usepackage{hyperref}
+
+\defaultfontfeatures{Ligatures=TeX}
+\setmainfont{TeX Gyre Schola}
+%\setromanfont{Tahoma}
+
+\pagestyle{empty}
+\geometry{letterpaper,tmargin=.5in,bmargin=1in,lmargin=.5in,rmargin=.5in,headheight=0in,headsep=0in,footskip=.3in}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0in}
+\setlength{\itemsep}{0in}
+\setlength{\topsep}{0in}
+\setlength{\tabcolsep}{0in}
+
+% Name and contact information
+\newcommand{\name}{Joshua McIntosh}
+\newcommand{\addr}{Antioch, California}
+\newcommand{\phone}{(925) 526 - 6308}
+\newcommand{\email}{\href{http://www.linkedin.com/pub/joshua-mcintosh/57/b82/690}
+{View my LinkedIn profile}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% New commands and environments
+
+\newfontfamily \bigtxt[]{TeX Gyre Heros}
+\newfontfamily \myname[]{TeX Gyre Schola}
+
+% This defines how the name looks
+\newcommand{\bigname}[1]{
+		\begin{center}\huge{\myname #1}\end{center}
+}
+
+% A ressection is a main section (<H1>Section</H1>)
+\newenvironment{ressection}[1]{
+	\vspace{4pt}
+	{\textbf{\LARGE {\bigtxt #1}}}
+	\begin{itemize}
+	\vspace{2pt}
+}{
+	\end{itemize}
+}
+
+% A resitem is a simple list element in a ressection (first level)
+\newcommand{\resitem}[1]{
+	\vspace{2.1pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A ressubitem is a simple list element in anything but a ressection (second level)
+\newcommand{\ressubitem}[1]{
+	\vspace{-2pt}
+	\item \begin{flushleft} #1 \end{flushleft}
+}
+
+% A resbigitem is a complex list element for stuff like jobs and education:
+%  Arg 1: Name of company or university
+%  Arg 2: Location
+%  Arg 3: Title and/or date range
+\newcommand{\resbigitem}[3]{
+	\vspace{-5pt}
+	\item
+	\textbf{#1}---#2 \\
+	\textit{#3}
+}
+
+% This is a list that comes with a resbigitem
+\newenvironment{ressubsec}[3]{
+	\resbigitem{#1}{#2}{#3}
+	\vspace{-4pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+% This is a simple sublist
+\newenvironment{reslist}[1]{
+	\resitem{\textbf{#1}}
+	\vspace{0pt}
+	\begin{itemize}
+}{
+	\end{itemize}
+}
+
+
+
+\newfontfamily \autodesk[Color=00B2EF]{TeX Gyre Bonum}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Now for the actual document:
+
+\begin{document}
+
+% \fontfamily{ppl} \selectfont
+
+% Name with horizontal rule
+\bigname{\name}
+
+\vspace{-8pt} \rule{\textwidth}{.25pt}
+\textsf{Located in \addr}\hfill \phone;\hspace{4pt}\email
+
+
+\vspace{8 pt}
+
+\begin{ressection}{Summary}
+\item Linux admin and web engineer with enterprise experience; providing 
+	statistics collection and automation tasks for about 1,000 servers; with
+	working experince in LDAP, the LAMP stack, \texttt{yum/rpm}, facets of 
+	repackaging software for \texttt{UNIX} and Linux consumption, RHEL and 
+	CentOS distributions of Linux as well as Solaris 5.9 and 5.10; And 
+	experience with Ruby On Rails, some PHP libraries and frameworks, as well as
+	client-side and server-side javascript.
+\end{ressection}
+ 
+\begin{ressection}{Related Experience}
+
+		\begin{ressubsec}{\href{http://usa.autodesk.com/}{\autodesk Autodesk}, Inc.}{San Rafael, CA}{December 
+				2011--September 06, 2012}
+				\begin{reslist}{Server Administration:}
+						\resitem {assisted with day-to-day tasks such as 
+						installing and maintaining software, as well as ticketed
+						events, such as disk overusage or application errors}
+
+						\resitem {Helped other engineers with projects, including 
+						vulnerabilty testing, upgrading consoles, and data 
+						collections.}
+
+						\resitem {Worked on maintainence tasks across upwards of 
+						1,000 servers.}
+
+				\end{reslist}
+
+				\begin{reslist}{Website Design and Engineering:}
+						\resitem {Designed server inventory system using the
+						LAMP stack and \href{http://phpsavant.com/}
+						{PHP's Savant templating library}, as well as jQuery, 
+						\href{http://people.iola.dk/olau/flot/examples}{Flot}, 
+						and \href{http://twitter.github.com/bootstrap/index.html}
+						{Twitter Bootstrap}. Site also used nagios and 
+						rrdtool as a data provider.}
+
+						\resitem {Built a proof of conecept site using 
+						\href{http://angularjs.org/}{Angularjs}
+						and PHP's \href{http://slimframework.com/}{Slim} 
+						application, also with jQuery and Twitter 
+						Bootstrap.}
+
+						\resitem {Worked on a web interface for managing a 
+						multiple-system sudoers file driven by Ruby on Rails 
+						and Active Directory via ruby-ldap.}
+
+				\end{reslist}
+
+		\end{ressubsec}
+\end{ressection}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Skills/Interests}
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%% COMSC %%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%\resitem{\textbf{Operating Systems:} Linux (Gentoo, Red Hat, and Debian), Mac OS 9 and X, UNIX (several variants), Windows 98/2000/XP}
+
+    %%%%%%%%%%%%%%%%%%%%%%%% REG   %%%%
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{reslist}{Computer Systems---Linux:}
+		\ressubitem{Primary computing platfrom of choice is Linux, using the 
+		\href{http://www.archlinux.org/}{Archlinux} distribution.}
+
+		\ressubitem{Experience with \texttt{rpm}, \texttt{dpkg}, \texttt{tar} 
+		and other package management systems, as well as frontends to those.}
+
+        \resitem{\textbf{LFS:} built a GNU/linux software distribution from 
+		``scratch'' under the instruction of the 
+		\href{http://www.linuxfromscratch.org/lfs}{\underline{Linux From 
+		Scratch}} Project. This invloves partitioning, setting up file systems,
+		retrieving sources for all system packages, building a temporary and 
+		then permanent C/C++ toolchain, building/configuring packages, setting 
+		up virtual nodes for initial devices and finally setting up the user and 
+		boot sequences for that system.}
+
+		\ressubitem{In short, Linux is \textbf{fun} to learn and work with.}
+        %    \resitem{\textbf{Previous interactions:} I've had limited interaction with Fedora, Debian, Gentoo, and FreeBSD--in 
+        %    installing, package management and some general use.}
+        %    \resitem{\textbf{Other OS's:} Lastly, I've used Windows XP for 6 years (and on and off since), and Mac OS X for 3 years.}
+    \end{reslist}
+    \begin{reslist}{\textbf{Computer Systems---Tools:}}
+		\ressubitem{\textbf{Web Design:} Experience with jQuery, Ruby On Rails,
+		Twitter Bootstrap, Angular, some \href{http://documentcloud.github.com/
+		backbone/}{Backbone.js}.}
+%        \ressubitem{\textbf{Programming:} I have sampled and used a few different programming languages, mostly for scripting. This includes:}
+%            \begin{itemize}
+%                \item{Bash scripts}
+%                \item{Ruby}
+%                \item{C++}
+%            \end{itemize}
+        \ressubitem{\textbf{\LaTeX{}:} Experience with \LaTeX{}, used for professional documentation.}
+    \end{reslist}
+    \resitem{\textbf{Music:} I've played trumpet for the last 10 years, which has not only been fun but has had me 
+        working with people of all different kinds.}
+
+
+%	\begin{reslist}{Computer Languages:}
+%
+%		\ressubitem{Proficient in C, C++, HTML, Java, \LaTeX, PHP, UNIX Shells}
+%
+%		\ressubitem{Familiar with Perl, SQL}
+%
+%	\end{reslist}
+%
+%	\begin{reslist}{Tools and Systems:}
+%
+%		\ressubitem{Proficient in Apache, BIND, CVS/RCS, Make, GnuPG, SSHD, VI}
+%
+%		\ressubitem{Familiar with Kerberos, MySQL, NFS, OpenLDAP, OpenSSL, Postfix, Samba}
+%
+%	\end{reslist}
+
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{ressection}{Education}
+
+    \begin{ressubsec}{Los Medanos Community College}{Pittsburg, CA}{Computer 
+			Science, 2008--present}
+		\ressubitem{Completion of classes pertaining to basic programming and 
+		Object-oriented programming in C++, programming logic and design, 
+		Network Operating Systems, and Web design in html, css, the Dreamweaver
+		IDE, and basic Flash programming.}
+
+        \ressubitem{Eligible for the Web Design certificate.}
+
+        %\ressubitem{Participated in the Los Medanos College Jazz and Concert Bands, 2008-2010.}
+
+    \end{ressubsec}
+
+	\begin{ressubsec}{Antioch High School}{Antioch, CA}{Started 2004, Graduated 2008}
+%        \begin{reslist}{Participated in:}
+%            \resitem{Marching Band 2004-2008, trumpet section leader 2007--2008}
+%            \resitem{Concert Band 2004-2008}
+%            \resitem{Jazz Band 2006-2008}
+%            \resitem{East County Honor Band twice, approx. 2005, 2007}
+%        \end{reslist}
+        \ressubitem{Participated in: Marching Band/Concert Band 2004--2008, Jazz Band 2006--2008, East County Honor Band approx. 2005, 2007, brass section leader 2007--2008}
+        \ressubitem{John Philip Sousa Band Award, 2008}
+		\ressubitem{Golden State Merit Diploma}
+	\end{ressubsec}
+
+\end{ressection}
+
+
+
+\begin{ressection}{Volunteer Experience}
+
+    \resitem{\textbf{Thanksgivings Day:} I've voluntered time over many thanksgivings at the American Legion Hall in Antioch, preparing and serving food. 2001-present.}	
+    \begin{ressubsec}{Computer Technitian}{(Self-Employed)}{Computer Services: 2009--present}
+		\ressubitem{I've troubleshooted problems for home users, from desktop software tweaks and network to hardware upgrades.}
+        %\ressubitem{While people pay if they can, I'm willing to volunteer my time in some cases and trade services in others.}
+	\end{ressubsec}
+
+    \resitem{\textbf{Marching Band:} After graduating, I continued to help the band with organizing events, serving food and many other tasks. 2008-2011.}
+    \resitem{\textbf{Youth Group:} I participated in and led a youth group at Golden Hills Community Church, approx. 2003-2007}
+
+
+\end{ressection}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%\begin{ressection}{Achievements and Activities}
+
+%	\resitem{Served a voluntary two-year mission in Serbia and Bulgaria (2001--2003).  Speak fluent Serbian and basic Bulgarian.}
+%
+%	\resitem{As a member and president of the BYU Unix Users Group, assist new Linux users and participate in presentations and discussions on advanced topics (2003--present).}
+%
+%	\resitem{Manage a heterogeneous home network and family server (1996--present).}
+%
+%	\resitem{Received a National Merit Scholarship.}
+%
+%	\resitem{Co-authored ``Interacting Quantitative Trait Loci Control Phenotypic Variation in Murine Estradiol-Regulated Responses,'' \textit{Endocrinology} 140 no. 2 (1999).}
+%
+%	\resitem{Awarded Eagle Scout Rank, Boy Scouts of America (1996).}
+
+
+%\end{ressection}
+
+
+\end{document}
