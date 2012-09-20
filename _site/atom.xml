@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ 
+ <title>Josh's Resume</title>
+ <link href="http://username.github.com/resume/atom.xml" rel="self"/>
+ <link href="http://username.github.com/resume"/>
+ <updated>2012-09-19T23:50:28-07:00</updated>
+ <id>http://username.github.com/resume</id>
+ <author>
+   <name>Joshua McIntosh</name>
+   <email>blah@email.test</email>
+ </author>
+
+ 
+ 
+</feed>

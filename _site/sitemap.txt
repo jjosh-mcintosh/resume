@@ -1,0 +1,8 @@
+
+http://username.github.com/resume/tags.html
+http://username.github.com/resume/index.html
+http://username.github.com/resume/archive.html
+http://username.github.com/resume/sitemap.txt
+http://username.github.com/resume/pages.html
+http://username.github.com/resume/categories.html
+http://username.github.com/resume/atom.xml
