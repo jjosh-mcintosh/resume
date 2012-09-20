@@ -2,6 +2,7 @@
 layout: page
 title: Josh's Résumé
 tagline: Have a look!
+group: project
 ---
 {% include JB/setup %}
 
